@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title></title>
+    <style>.satisfies {color:red}</style>
+  </head>
+  <body ng-app="MyApp">
+    <div ng-controller="PostsCtrl">
+      <input ng-model="range"></input>
+      <ul>
+        <li ng-repeat="version in versions" ng-class="{true: 'satisfies', false: ''}[satisfies('{{version}}', '{{$parent.range}}')]">{{version}}</li>
+      </ul>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
