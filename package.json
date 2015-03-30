@@ -8,7 +8,7 @@
   "scripts": {
     "build-js": "browserify src/entry.js -o build/bundle.js",
     "build-css": "stylus --compress < src/styles.styl > build/styles.css && cp node_modules/angular/angular-csp.css build/",
-    "build": "npm run build-js && npm run build-css && cp src/index.html build/index.html",
+    "build": "mkdir -p build && npm run build-js && npm run build-css && cp src/index.html build/index.html",
     "livereload": "live-reload --port 9091 ./build/*",
     "watch": "watch 'npm run build' src/"
   },
