@@ -1,0 +1,103 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+body
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
+  line-height: 1.7em
+  margin: auto 0;
+  padding-top: 100px;
+  text-align: center
+  -webkit-font-smoothing: antialiased;
+
+h1, h2
+  color: rgb(203, 56, 55);
+
+code
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  color: rgb(102, 102, 102);
+  font-family: Inconsolata, Courier, monospace;
+  padding: 2px 6px;
+
+.satisfies code
+  background-color: rgba(109, 227, 117, 0.5);
+  border: 1px rgb(204, 204, 204) solid;
+  color: green;
+
+input
+  font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 300;
+  height: 45px;
+  padding: 10px 10px;
+  width: 200px;
+  vertical-align: baseline;
+
+label
+  display: block;
+
+#package
+  padding: 50px 0px 0px;
+
+  button
+    display: none;
+
+#versions
+  -webkit-columns: 20 120px;
+  -moz-columns: 20 120px;
+  columns: 20 120px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  text-align: left;
+  padding: 10px 30px 50px;
+
+#how
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-columns: 10 350px;
+  -moz-columns: 10 350px;
+  columns: 10 350px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  padding: 30px;
+
+  h2
+    -webkit-column-span: all;
+
+  h3
+    margin-top: 0;
+
+  > div
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+
+  div
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: left;
+
+#how .inner div
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+.example
+  background: lightgrey;
+  margin: 20px 0;
+  padding: 10px;
+
+  h4
+    margin: 0;
+
+.note::before
+  content: 'Note: '
+
+[ng\:cloak] code, [ng-cloak] code, .ng-cloak code {
+  display: none !important;
+}
