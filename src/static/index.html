@@ -12,7 +12,7 @@
       <form id="package">
         <label for="package-name">pick a package</label>
         <input id="package-name" ng-model="package"></input>
-        <button ng-click="getVersions()">&raquo;</button>
+        <input type="submit" value="fetch" ng-click="getVersions()"></input>
       </form>
       <label for="range">enter a range</label>
       <input id="range" ng-model="range" ng-change="checkVersions()"></input>
