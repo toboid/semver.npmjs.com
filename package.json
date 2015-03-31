@@ -1,7 +1,7 @@
 {
   "name": "semver.npmjs.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website that teaches you how semantic versioning works",
   "main": "index.js",
   "author": "",
   "license": "MIT",
