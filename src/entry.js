@@ -7,6 +7,7 @@ app.controller('VersionCtrl', function($scope, $http) {
   $scope.package = 'lodash';
 
   $scope.getVersions = function() {
+    $scope.loading = true;
     $http.get('http://npm-registry-cors-proxy.herokuapp.com/' + $scope.package)
       .success(function(data, status, headers, config) {
         versions = Object.keys(data.versions);
@@ -25,8 +26,11 @@ app.controller('VersionCtrl', function($scope, $http) {
         }
 
         $scope.checkVersions();
+        $scope.loading = false;
       })
       .error(function(data, status, headers, config) {
+        $scope.loading = false;
+
         console.log('Sorry, could not load data.')
       });
   }

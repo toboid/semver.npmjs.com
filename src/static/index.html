@@ -16,6 +16,7 @@
       </form>
       <label for="range">enter a range</label>
       <input id="range" ng-model="range" ng-change="checkVersions()"></input>
+      <img ng-class="{true: 'loading', false: 'loaded'}[loading]" src="spinner.gif" />
       <ul id="versions">
         <li ng-repeat="version in versions" ng-class="{true: 'satisfies', false: ''}[version.satisfies]">
           <code ng-cloak>
