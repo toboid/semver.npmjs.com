@@ -12,7 +12,7 @@ app.controller('VersionCtrl', function($scope, $http) {
       .success(function(data, status, headers, config) {
         versions = Object.keys(data.versions);
 
-        $scope.range = '*'
+        $scope.range = '1.x'
         $scope.versions = versions.map(function(v) {
           return {
             "version": v
