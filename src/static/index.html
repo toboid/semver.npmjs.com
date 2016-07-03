@@ -21,6 +21,7 @@
         <input id="range" ng-model="range" ng-change="checkVersions()"></input>
       </div>
       <img ng-class="{true: 'loading', false: 'loaded'}[loading]" src="spinner.gif" />
+      <a id="npm-link" href="https://www.npmjs.com/package/{{package}}">{{package}} on npmjs.com</a>
       <ul id="versions">
         <li ng-repeat="version in versions" ng-class="{true: 'satisfies', false: ''}[version.satisfies]">
           <code ng-cloak>
